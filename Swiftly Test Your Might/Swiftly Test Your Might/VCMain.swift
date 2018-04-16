@@ -14,7 +14,7 @@ class VCMain: UIViewController
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    fileprivate let edgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 3, right: 0)
+    fileprivate let edgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     
     let autoMobiles: [Automobile] = Gimme.the.collectionViewDataForSection0() //calling once here
     let reuseCellAuto = "reuseCellAuto"
@@ -70,11 +70,11 @@ extension VCMain: UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return edgeInsets.bottom //3
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return edgeInsets.bottom //3
+        return 3
     }
     
 }

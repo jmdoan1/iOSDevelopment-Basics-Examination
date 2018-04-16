@@ -24,6 +24,8 @@
 		256535BA207B70B600DC5A4A /* VCNumberPushed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256535B9207B70B600DC5A4A /* VCNumberPushed.swift */; };
 		256535BC207CB52900DC5A4A /* Algorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256535BB207CB52900DC5A4A /* Algorithms.swift */; };
 		256535BE207CC37C00DC5A4A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256535BD207CC37C00DC5A4A /* Extensions.swift */; };
+		C1E9FDB620850EE3004B3E39 /* CVNumber.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E9FDB520850EE3004B3E39 /* CVNumber.xib */; };
+		C1E9FDB820850EF8004B3E39 /* CVNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E9FDB720850EF8004B3E39 /* CVNumber.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		256535B9207B70B600DC5A4A /* VCNumberPushed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCNumberPushed.swift; sourceTree = "<group>"; };
 		256535BB207CB52900DC5A4A /* Algorithms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithms.swift; sourceTree = "<group>"; };
 		256535BD207CC37C00DC5A4A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C1E9FDB520850EE3004B3E39 /* CVNumber.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CVNumber.xib; sourceTree = "<group>"; };
+		C1E9FDB720850EF8004B3E39 /* CVNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVNumber.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,8 @@
 				256535B0207831AE00DC5A4A /* VwTire.xib */,
 				256535B5207AD52E00DC5A4A /* CVAutomobile.swift */,
 				256535B6207AD52E00DC5A4A /* CVAutomobile.xib */,
+				C1E9FDB720850EF8004B3E39 /* CVNumber.swift */,
+				C1E9FDB520850EE3004B3E39 /* CVNumber.xib */,
 			);
 			path = "Custom UI";
 			sourceTree = "<group>";
@@ -227,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				256535B1207831AE00DC5A4A /* VwTire.xib in Resources */,
+				C1E9FDB620850EE3004B3E39 /* CVNumber.xib in Resources */,
 				25653592207826F300DC5A4A /* LaunchScreen.storyboard in Resources */,
 				2565358F207826F300DC5A4A /* Assets.xcassets in Resources */,
 				2565358D207826F300DC5A4A /* Main.storyboard in Resources */,
@@ -248,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1E9FDB820850EF8004B3E39 /* CVNumber.swift in Sources */,
 				256535AA2078310900DC5A4A /* NibView.swift in Sources */,
 				256535BA207B70B600DC5A4A /* VCNumberPushed.swift in Sources */,
 				256535B32078360400DC5A4A /* VCTireModal.swift in Sources */,

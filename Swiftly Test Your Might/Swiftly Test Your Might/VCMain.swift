@@ -19,6 +19,8 @@ class VCMain: UIViewController
     let autoMobiles: [Automobile] = Gimme.the.collectionViewDataForSection0() //calling once here
     let reuseCellAuto = "reuseCellAuto"
     
+    var collectionViewDataForSection1 = [Int]()
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -26,9 +28,20 @@ class VCMain: UIViewController
         //Register the CVAUtomobile UITableViewCell nib and apply the reuse identifier
         collectionView.register(UINib(nibName: "CVAutomobile", bundle: nil), forCellWithReuseIdentifier: reuseCellAuto)
         
-        
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        _ = Gimme.the.collectionViewDataForSection1(onDone: { (result) in
+            
+            switch result {
+            case .success(let values):
+                self.collectionViewDataForSection1 = values
+                self.collectionView.reloadSections([1])
+            case .failure():
+                print("JD: 'Gimme.the.collectionViewDataForSection1' FAILED")
+            }
+            
+        })
     }
 }
 

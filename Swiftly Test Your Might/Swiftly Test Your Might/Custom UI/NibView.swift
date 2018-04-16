@@ -8,7 +8,7 @@
 
 import UIKit
 
-/// What's the point of this?
+/// What's the point of this? --to display on storyboard?
 class NibView: UIView
 {
     @IBOutlet var baseVw: UIView!

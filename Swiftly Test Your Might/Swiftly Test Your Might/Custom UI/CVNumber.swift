@@ -17,7 +17,8 @@ class CVNumber: UICollectionViewCell
     var cellNumber: Int? {
         willSet {
             if let nv = newValue {
-                numberLbl.text = "\(nv)"
+                numberLbl.text = nv.description
+                setBackgroundColor(withNumber: nv)
             } else {
                 numberLbl.text = ""
             }
@@ -31,6 +32,22 @@ class CVNumber: UICollectionViewCell
     override func awakeFromNib()
     {
         super.awakeFromNib()
-        numberLbl.text = ""
+        
+        if let cn = cellNumber {
+            numberLbl.text = cn.description
+        } else {
+            numberLbl.text = ""
+        }
+        
+    }
+    
+    private func setBackgroundColor(withNumber: Int) {
+        if withNumber % 23 == 0 {
+            self.backgroundColor = UIColor.orange
+        } else if withNumber % 2 == 0 {
+            self.backgroundColor = UIColor.green
+        } else {
+            self.backgroundColor = UIColor.red
+        }
     }
 }

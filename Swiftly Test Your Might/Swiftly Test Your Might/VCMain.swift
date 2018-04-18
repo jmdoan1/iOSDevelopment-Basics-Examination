@@ -56,6 +56,11 @@ class VCMain: UIViewController
             
         })
     }
+    
+    @objc func presentModally(sender: UIButton) {
+        let tag = sender.tag
+        print("JD: Present modally from tag \(tag): \n\(autoMobiles[tag])")
+    }
 }
 
 extension VCMain: UICollectionViewDataSource, UICollectionViewDelegate
@@ -83,6 +88,10 @@ extension VCMain: UICollectionViewDataSource, UICollectionViewDelegate
             let cell: CVAutomobile = collectionView.dequeueReusableCell(withReuseIdentifier: reuseCellAuto, for: indexPath) as! CVAutomobile
             
             cell.populate(using: autoMobiles[row])
+            
+            // Adding a tag to the cell's modal button that can later be pulled to determine which cell is being tapped
+            cell.modalBt.tag = row
+            cell.modalBt.addTarget(self, action: #selector(VCMain.presentModally(sender:)), for: .touchUpInside)
             
             return cell
         } else {

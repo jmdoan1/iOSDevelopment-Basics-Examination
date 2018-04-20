@@ -32,6 +32,10 @@ class CVAutomobile: UICollectionViewCell
         return CVAutomobile().intrinsicContentSize.height
     }
     
+    @IBAction func push(_ sender: Any) {
+    }
+    
+    
     //MARK:- UI Business
     
     override var intrinsicContentSize: CGSize {

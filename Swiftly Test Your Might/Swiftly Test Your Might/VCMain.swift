@@ -65,6 +65,10 @@ class VCMain: UIViewController
             self.present(vc, animated: true, completion: nil)
         }
     }
+    
+    @objc func presentPushily(sender: UIButton) {
+        self.performSegue(withIdentifier: "toNumber", sender: self)
+    }
 }
 
 extension VCMain: UICollectionViewDataSource, UICollectionViewDelegate
@@ -96,6 +100,9 @@ extension VCMain: UICollectionViewDataSource, UICollectionViewDelegate
             // Adding a tag to the cell's modal button that can later be pulled to determine which cell is being tapped
             cell.modalBt.tag = row
             cell.modalBt.addTarget(self, action: #selector(VCMain.presentModally(sender:)), for: .touchUpInside)
+            
+            // Link right cell to push VCNumberPushed
+            cell.pushBt.addTarget(self, action: #selector(VCMain.presentPushily(sender:)), for: .touchUpInside)
             
             return cell
         } else {

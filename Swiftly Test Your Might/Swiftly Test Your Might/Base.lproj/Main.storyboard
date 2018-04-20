@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pfg-84-yU2">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Hi-du-6PT">
-                                <rect key="frame" x="37.5" y="76.5" width="300" height="534"/>
+                                <rect key="frame" x="37.5" y="98.5" width="300" height="534"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="K72-3c-97s">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="534"/>
@@ -60,12 +60,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="8e7-F6-yzP"/>
                     <connections>
                         <outlet property="collectionView" destination="K72-3c-97s" id="l6c-0f-Tye"/>
+                        <segue destination="pYw-ev-kvv" kind="show" identifier="toNumber" id="Xrv-Bx-EeY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1608.8" y="31.934032983508249"/>
         </scene>
         <!--Number Pushed-->
         <scene sceneID="Sp2-J4-g9z">
@@ -76,7 +79,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bib-GY-zlK">
-                                <rect key="frame" x="37.5" y="76.5" width="300" height="534"/>
+                                <rect key="frame" x="37.5" y="98.5" width="300" height="534"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -97,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ash-Pe-fN6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1412" y="34"/>
+            <point key="canvasLocation" x="2351.1999999999998" y="33.733133433283363"/>
         </scene>
         <!--Tire Modal-->
         <scene sceneID="N5F-WL-vk8">
@@ -137,6 +140,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tn4-ph-7Nh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="670" y="731"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7iU-G0-JYP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pfg-84-yU2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="n6O-nL-dPT">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="oa4-lz-eJj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7NV-cO-3jp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="480.80000000000001" y="-665.21739130434787"/>
         </scene>
     </scenes>
 </document>

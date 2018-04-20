@@ -26,16 +26,29 @@ class VwTire: NibView
     
     func populate(using auto: Automobile)
     {
+        print(auto.wheels)
         makeModelLbl.text = "Tires for:\n\(auto.make)\n\(auto.model)"
         for x in 0 ..< lbls.count
         {
-            lbls[x].text = String(describing: auto.wheels[x].dateChanged)
+            if auto.wheels.count > x {
+                
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "dd MMM yyyy" //dd = 2 day numbers even when under 10, MMM = 3 character short code for month, yyyy = full four digit year
+                
+                //apply previously set format to date and set label text
+                lbls[x].text = dateFormatter.string(from: auto.wheels[x].dateChanged)
+                
+                if auto.wheels[x].punctured {
+                    vws[x].backgroundColor = UIColor.red
+                }
+            }
         }
     }
     
     //MARK:- Private Properties
     
     private var lbls = [UILabel]()
+    private var vws = [UIView]()
     
     //MARK:- UI Business
     
@@ -47,5 +60,10 @@ class VwTire: NibView
         lbls.append(lbl2)
         lbls.append(lbl3)
         lbls.append(lbl4)
+        
+        vws.append(tire1Vw)
+        vws.append(tire2Vw)
+        vws.append(tire3Vw)
+        vws.append(tire4Vw)
     }
 }

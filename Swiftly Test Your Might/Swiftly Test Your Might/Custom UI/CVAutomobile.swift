@@ -27,6 +27,15 @@ class CVAutomobile: UICollectionViewCell
         modelLbl.text = auto.model
     }
     
+    static func intrinsicHeight() -> CGFloat {
+        //Calling the height from the overridden intrinsicContentSize from below
+        return CVAutomobile().intrinsicContentSize.height
+    }
+    
+    @IBAction func push(_ sender: Any) {
+    }
+    
+    
     //MARK:- UI Business
     
     override var intrinsicContentSize: CGSize {

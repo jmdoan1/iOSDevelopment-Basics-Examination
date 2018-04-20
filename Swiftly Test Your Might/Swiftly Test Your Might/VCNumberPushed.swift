@@ -12,5 +12,18 @@ class VCNumberPushed: UIViewController
 {
     //MARK:- Properties
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        Gimme.the.loadingSequenceFor(thePushedVC: self)
+    }
+    
     @IBOutlet var numberLbl: UILabel!
+}
+
+extension VCNumberPushed: SouperKoolDelegate {
+    func souperDidGive(new number: Int) {
+        DispatchQueue.main.async {
+            self.numberLbl.text = number.description
+        }
+    }
 }

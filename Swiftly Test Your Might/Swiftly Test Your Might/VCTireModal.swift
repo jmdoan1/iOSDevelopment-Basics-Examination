@@ -11,7 +11,6 @@ import UIKit
 class VCTireModal: UIViewController
 {
     //MARK:- Properties
-    
     var automobile: Automobile?
     
     //MARK:- Private Properties
@@ -27,5 +26,9 @@ class VCTireModal: UIViewController
         {
             tireVw.populate(using: auto)
         }
+    }
+    
+    @IBAction func goAway(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
 }

@@ -26,10 +26,13 @@ class VwTire: NibView
     
     func populate(using auto: Automobile)
     {
+        print(auto.wheels)
         makeModelLbl.text = "Tires for:\n\(auto.make)\n\(auto.model)"
         for x in 0 ..< lbls.count
         {
-            lbls[x].text = String(describing: auto.wheels[x].dateChanged)
+            if auto.wheels.count > x {
+                lbls[x].text = String(describing: auto.wheels[x].dateChanged)
+            }
         }
     }
     

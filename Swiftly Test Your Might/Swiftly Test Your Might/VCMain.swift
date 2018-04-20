@@ -59,7 +59,11 @@ class VCMain: UIViewController
     
     @objc func presentModally(sender: UIButton) {
         let tag = sender.tag
-        print("JD: Present modally from tag \(tag): \n\(autoMobiles[tag])")
+        
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "VCTireModal") as? VCTireModal {
+            vc.automobile = autoMobiles[tag]
+            self.present(vc, animated: true, completion: nil)
+        }
     }
 }
 

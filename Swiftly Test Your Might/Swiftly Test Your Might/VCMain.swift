@@ -39,6 +39,7 @@ class VCMain: UIViewController
         getSection1Data()
     }
     
+
     func getSection1Data()
     {
         _ = Gimme.the.collectionViewDataForSection1(onDone: { (result) in
@@ -68,6 +69,12 @@ class VCMain: UIViewController
     
     @objc func presentPushily(sender: UIButton) {
         self.performSegue(withIdentifier: "toNumber", sender: self)
+    }
+  
+    override func didReceiveMemoryWarning()
+    {
+        super.didReceiveMemoryWarning()
+        print("VCMain is reporting that the device is low on RAM!")
     }
 }
 
@@ -146,5 +153,5 @@ extension VCMain: UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 3
     }
- 
+
 }

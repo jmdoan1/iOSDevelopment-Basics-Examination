@@ -10,6 +10,17 @@ import Foundation
 
 func algorithm1(_ str: String) -> Character?
 {
+    var chars = [Character]()
+    
+    for char in str {
+        //checks if the character has already appeared. If so, it returns it, if not, it adds it to the array
+        if chars.contains(char) {
+            return char
+        }
+
+        chars.append(char)
+    }
+    
     return nil
 }
 
